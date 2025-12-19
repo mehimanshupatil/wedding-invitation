@@ -6,24 +6,28 @@ const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const isAttemptingPlay = useRef(false);
+
   useEffect(() => {
     if (audioRef.current) {
         audioRef.current.volume = 1;
     }
 
-    const handleInteraction = () => {
-      if (audioRef.current && !isPlaying) {
-        audioRef.current.play()
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch((error) => {
-            console.log("Auto-play failed:", error);
-          });
+    const handleInteraction = async () => {
+      if (audioRef.current && !isPlaying && !isAttemptingPlay.current) {
+        isAttemptingPlay.current = true;
+        
+        try {
+          await audioRef.current.play();
+          setIsPlaying(true);
+          // Only remove listeners after successful playback
+          document.removeEventListener('click', handleInteraction);
+          document.removeEventListener('touchstart', handleInteraction);
+        } catch (error) {
+          console.log("Auto-play failed, will retry on next interaction:", error);
+          isAttemptingPlay.current = false;
+        }
       }
-      // Remove listeners after first interaction attempt
-      document.removeEventListener('click', handleInteraction);
-      document.removeEventListener('touchstart', handleInteraction);
     };
 
     document.addEventListener('click', handleInteraction);
@@ -33,7 +37,7 @@ const MusicPlayer = () => {
       document.removeEventListener('click', handleInteraction);
       document.removeEventListener('touchstart', handleInteraction);
     };
-  }, []);
+  }, [isPlaying]);
 
   const togglePlay = () => {
     if (audioRef.current) {
@@ -51,7 +55,9 @@ const MusicPlayer = () => {
       <audio
         ref={audioRef}
         loop
-        src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/There%20is%20Romance.mp3" 
+        preload="auto"
+        // src="https://incompetech.com/music/royalty-free/mp3-royaltyfree/There%20is%20Romance.mp3" 
+        src="/There-is-Romance.mp3" 
       />
       
       <motion.button
