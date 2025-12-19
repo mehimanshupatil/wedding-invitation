@@ -15,7 +15,7 @@ const Hero = () => {
             
             <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-text mb-6 leading-[0.9]">
                 Shremal <br />
-                <span className="italic text-stone-400 ml-12">&</span> Himanshu
+                <span className="italic text-primary ml-0 md:ml-12">&</span> Himanshu
             </h1>
 
             <div className="w-24 h-px bg-primary/30 my-8 md:ml-0 mx-auto"></div>
