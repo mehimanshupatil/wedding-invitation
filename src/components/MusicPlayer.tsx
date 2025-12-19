@@ -8,8 +8,31 @@ const MusicPlayer = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-        audioRef.current.volume = 0.4;
+        audioRef.current.volume = 1;
     }
+
+    const handleInteraction = () => {
+      if (audioRef.current && !isPlaying) {
+        audioRef.current.play()
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((error) => {
+            console.log("Auto-play failed:", error);
+          });
+      }
+      // Remove listeners after first interaction attempt
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('touchstart', handleInteraction);
+    };
+
+    document.addEventListener('click', handleInteraction);
+    document.addEventListener('touchstart', handleInteraction);
+
+    return () => {
+      document.removeEventListener('click', handleInteraction);
+      document.removeEventListener('touchstart', handleInteraction);
+    };
   }, []);
 
   const togglePlay = () => {

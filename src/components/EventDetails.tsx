@@ -46,16 +46,16 @@ const EventDetails = () => {
     const events = [
         {
             title: "The Ceremony",
-            date: "December 12, 2025",
-            time: "10:00 AM",
-            location: "Grand Palace Hotel",
+            date: "February 6, 2026",
+            time: "11:00 AM",
+            location: "Wagholi, Nalasopara",
             description: "Join us for the traditional wedding ceremony as we exchange vows under the mandap, surrounded by flowers and blessings.",
             delay: 0.2,
             mapUrl: "https://www.google.com/maps/search/?api=1&query=Grand+Palace+Hotel+Mumbai"
         },
         {
             title: "The Reception",
-            date: "December 12, 2025",
+            date: "February 6, 2026",
             time: "7:00 PM",
             location: "Grand Ballroom",
             description: "An evening of elegance, fine dining, and dancing. We look forward to celebrating our first night as a married couple with you.",

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Countdown = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date("2025-12-12T00:00:00") - +new Date();
+    const difference = +new Date("2026-02-06T00:00:00") - +new Date();
     let timeLeft = {
       days: 0,
       hours: 0,

@@ -18,7 +18,7 @@ const Preloader = () => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-secondary"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-secondary"
         >
           <div className="relative">
              {/* Decorative Circle */}
@@ -36,10 +36,10 @@ const Preloader = () => {
               className="text-center"
             >
               <h1 className="font-serif text-5xl md:text-6xl text-text mb-2 tracking-tight">
-                P <span className="text-primary italic">&</span> R
+                S <span className="text-primary italic">&</span> H
               </h1>
               <p className="text-primary uppercase tracking-[0.4em] text-xs font-light">
-                December 12 • 2025
+                6 • 2 • 26
               </p>
             </motion.div>
           </div>
