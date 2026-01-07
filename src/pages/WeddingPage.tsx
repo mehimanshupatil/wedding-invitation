@@ -39,7 +39,7 @@ function WeddingPage({ events }: WeddingPageProps) {
                 <Confetti />
                 <MusicPlayer />
                 <Hero />
-                <Countdown />
+                {/* <Countdown /> */}
                 <EventDetails events={events} />
                 <Footer />
             </div>

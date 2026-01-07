@@ -2,7 +2,7 @@ import { MapPin, Clock, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 import type { Event } from '../data/himanshuEvents';
 
-const EventCard = ({ title, time, date, location, description, delay, mapUrl }: { title: string, time: string, date: string, location: string, description: string, delay: number, mapUrl: string }) => (
+const EventCard = ({ title, time, date, location, delay, mapUrl }: { title: string, time: string, date: string, location: string, delay: number, mapUrl: string }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -27,9 +27,9 @@ const EventCard = ({ title, time, date, location, description, delay, mapUrl }: 
       </div>
     </div>
 
-    <p className="text-stone-600 leading-relaxed font-light italic mb-8">
+    {/* <p className="text-stone-600 leading-relaxed font-light italic mb-8">
       {description}
-    </p>
+    </p> */}
 
     <a
       href={mapUrl}

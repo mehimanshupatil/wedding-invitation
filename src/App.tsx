@@ -1,17 +1,17 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router';
 import WeddingPage from './pages/WeddingPage';
 import { himanshuEvents } from './data/himanshuEvents';
 import { shremalEvents } from './data/shremalEvents';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/himanshu" element={<WeddingPage events={himanshuEvents} />} />
         <Route path="/shremal" element={<WeddingPage events={shremalEvents} />} />
         <Route path="/" element={<Navigate to="/himanshu" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
