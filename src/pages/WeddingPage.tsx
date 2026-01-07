@@ -5,7 +5,7 @@ import MusicPlayer from '../components/MusicPlayer';
 import Confetti from '../components/Confetti';
 import NoiseOverlay from '../components/NoiseOverlay';
 import Preloader from '../components/Preloader';
-import Countdown from '../components/Countdown';
+// import Countdown from '../components/Countdown';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import type { Event } from '../data/himanshuEvents';
 
