@@ -1,5 +1,5 @@
 const NoiseOverlay = () => {
-    return <div className="noise-overlay" />;
+	return <div className="noise-overlay" />;
 };
 
 export default NoiseOverlay;
