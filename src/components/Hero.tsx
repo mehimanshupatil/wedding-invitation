@@ -44,7 +44,7 @@ const Hero = () => {
 						<div className="absolute inset-0 border border-primary/20 translate-x-4 translate-y-4 z-0"></div>
 						<div className="absolute inset-0 bg-stone-200 z-10 overflow-hidden shadow-2xl">
 							<img
-								src="/image.png"
+								src="/image.jpg"
 								alt="Couple"
 								className="w-full h-full object-cover object-bottom opacity-90 hover:scale-105 transition-transform duration-[2s]"
 							/>
