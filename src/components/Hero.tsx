@@ -28,8 +28,8 @@ const Hero = () => {
 					</p>
 
 					<p className="text-stone-500 max-w-sm leading-relaxed font-light text-sm tracking-wide">
-						WE INVITE YOU TO JOIN US IN CELEBRATING OUR LOVE AND NEW BEGINNINGS
-						UNDER THE STARS.
+						WE INVITE YOU TO JOIN US AS WE CELEBRATE OUR LOVE AND BEGIN OUR NEW
+						JOURNEY TOGETHER.
 					</p>
 				</motion.div>
 
